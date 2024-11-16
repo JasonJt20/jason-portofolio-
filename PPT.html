@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Edukasi - Koleksi PDF</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0e0253, #f39c12);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Efek animasi fadeIn */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Container PDF */
+        .pdf-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pdf-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Hover Efek pada iframe */
+        .pdf-container:hover iframe {
+            opacity: 0.8;
+        }
+
+        /* Grid Layout untuk PDF */
+        .pdf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #01082b;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsivitas */
+        @media (max-width: 768px) {
+            .pdf-container {
+                height: 400px; /* Ukuran iframe lebih kecil pada perangkat mobile */
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header dengan animasi fadeIn -->
+    <header>
+        <h1>Website Edukasi - Koleksi PDF</h1>
+        <p>Jelajahi koleksi PDF edukasi yang menarik</p>
+    </header>
+
+    <!-- Konten PDF dengan efek grid dan hover -->
+    <div class="pdf-grid">
+
+        <!-- PDF pertama -->
+        <div class="pdf-container">
+            <iframe src="pdfs/Debian 11 (1).pdf" title="PDF 1"></iframe>
+        </div>
+
+        <!-- PDF kedua -->
+        <div class="pdf-container">
+            <iframe src="pdfs/Konfigurasi FTP.pdf" title="PDF 2"></iframe>
+        </div>
+
+        <!-- PDF ketiga -->
+        <div class="pdf-container">
+            <iframe src="pdfs/Remote server .pdf" title="PDF 3"></iframe>
+        </div>
+
+        <!-- PDF keempat -->
+        <div class="pdf-container">
+            <iframe src="pdfs/DNS.pdf" title="PDF 4"></iframe>
+        </div>
+
+        <!-- PDF kelima -->
+        <div class="pdf-container">
+            <iframe src="pdfs/Turtorial DHCP.pdf" title="PDF 5"></iframe>
+        </div>
+
+        <!-- PDF keenam -->
+        <div class="pdf-container">
+            <iframe src="pdfs/Konfigurasi file server pada Debian 12.pdf" title="PDF 6"></iframe>
+        </div>
+
+        <!-- PDF ketujuh -->
+        <div class="pdf-container">
+            <iframe src="pdfs/Database.pdf" title="PDF 7"></iframe>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Website Edukasi - Semua hak cipta dilindungi</p>
+    </footer>
+
+</body>
+</html>
